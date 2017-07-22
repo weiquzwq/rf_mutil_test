@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170723 00:53:17.672" generator="Rebot 3.0.1 (Python 2.7.10 on darwin)">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil" id="s1" name="iOS AutoTest Mutil">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil/01_测试用例" id="s1-s1" name="01 测试用例">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil/01_测试用例/01_登录" id="s1-s1-s1" name="01 登录">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil/01_测试用例/01_登录/01_登录.txt" id="s1-s1-s1-s1" name="01 登录">
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170723 00:51:54.775" level="FAIL">No application is open</msg>
+<status status="FAIL" endtime="20170723 00:51:54.775" starttime="20170723 00:51:54.773"></status>
+</kw>
+<msg timestamp="20170723 00:51:54.775" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20170723 00:51:54.775" level="FAIL">No application is open</msg>
+<status status="FAIL" endtime="20170723 00:51:54.775" starttime="20170723 00:51:54.771">No application is open</status>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="启动滑屏">
+<kw name="安装并打开论客" library="01_前置后置操作">
+<kw name="连接服务器" library="01_前置后置操作">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>&amp;{desired_caps}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170723 00:51:54.765" level="FAIL">No application is open</msg>
+<status status="FAIL" endtime="20170723 00:51:54.766" starttime="20170723 00:51:54.762"></status>
+</kw>
+<msg timestamp="20170723 00:51:54.766" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20170723 00:51:54.768" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not install app: 'Command 'ios-deploy --id 0a6fa2250bea19b846cec413700b360a94de41df --uninstall --bundle /var/folders/pp/vfz5cphx6c71zzk9m6xmxk9w0000gn/T/2017623-1132-1ln0n6v.wlh7b0ggb9/Payload/LunkrEnterprise.app' exited with code 253'
+</msg>
+<status status="FAIL" endtime="20170723 00:51:54.768" starttime="20170723 00:51:51.397"></status>
+</kw>
+<status status="FAIL" endtime="20170723 00:51:54.769" starttime="20170723 00:51:51.397"></status>
+</kw>
+<status status="FAIL" endtime="20170723 00:51:54.769" starttime="20170723 00:51:51.396"></status>
+</kw>
+<tags>
+<tag>tag1</tag>
+</tags>
+<status status="FAIL" endtime="20170723 00:51:54.769" critical="yes" starttime="20170723 00:51:51.395">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not install app: 'Command 'ios-deploy --id 0a6fa2250bea19b846cec413700b360a94de41df --uninstall --bundle /var/folders/pp/vfz5cphx6c71zzk9m6xmxk9w0000gn/T/2017623-1132-1ln0n6v.wlh7b0ggb9/Payload/LunkrEnterprise.app' exited with code 253'
+
+
+Also parent suite teardown failed:
+No application is open</status>
+</test>
+<test id="s1-s1-s1-s1-t2" name="启动滑屏2">
+<kw name="安装并打开论客" library="01_前置后置操作">
+<kw name="连接服务器" library="01_前置后置操作">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>&amp;{desired_caps}</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:52:29.519" starttime="20170723 00:51:51.397"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:29.520" starttime="20170723 00:51:51.397"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:29.520" starttime="20170723 00:51:51.396"></status>
+</kw>
+<kw name="点击允许通知按钮" library="01_登录界面操作">
+<arguments>
+<arg>${notice_okz}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:52:34.900" starttime="20170723 00:52:29.522"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20170723 00:52:34.900" level="INFO">Clicking element 'xpath=//*/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]/XCUIElementTypeButton[1]'.</msg>
+<status status="PASS" endtime="20170723 00:52:39.593" starttime="20170723 00:52:34.900"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:39.593" starttime="20170723 00:52:29.521"></status>
+</kw>
+<kw type="for" name="${i} IN RANGE [ 3 ]">
+<kw type="foritem" name="${i} = 0">
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>600</arg>
+<arg>300</arg>
+<arg>-500</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:52:45.544" starttime="20170723 00:52:39.594"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20170723 00:52:47.546" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170723 00:52:47.547" starttime="20170723 00:52:45.544"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:47.547" starttime="20170723 00:52:39.594"></status>
+</kw>
+<kw type="foritem" name="${i} = 1">
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>600</arg>
+<arg>300</arg>
+<arg>-500</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:52:53.171" starttime="20170723 00:52:47.548"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20170723 00:52:55.173" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170723 00:52:55.174" starttime="20170723 00:52:53.171"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:55.174" starttime="20170723 00:52:47.547"></status>
+</kw>
+<kw type="foritem" name="${i} = 2">
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>600</arg>
+<arg>300</arg>
+<arg>-500</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:53:00.635" starttime="20170723 00:52:55.175"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20170723 00:53:02.637" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170723 00:53:02.637" starttime="20170723 00:53:00.636"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:53:02.637" starttime="20170723 00:52:55.175"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:53:02.637" starttime="20170723 00:52:39.593"></status>
+</kw>
+<kw name="点击允许通知按钮" library="01_登录界面操作">
+<arguments>
+<arg>${start_use}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:53:08.297" starttime="20170723 00:53:02.639"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20170723 00:53:08.298" level="INFO">Clicking element 'xpath=//*/XCUIElementTypeOther[1]/XCUIElementTypeScrollView[1]/XCUIElementTypeButton[1]'.</msg>
+<status status="PASS" endtime="20170723 00:53:13.876" starttime="20170723 00:53:08.298"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:53:13.876" starttime="20170723 00:53:02.638"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170723 00:53:14.879" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170723 00:53:14.880" starttime="20170723 00:53:13.877"></status>
+</kw>
+<tags>
+<tag>tag2</tag>
+</tags>
+<status status="PASS" endtime="20170723 00:53:14.880" critical="yes" starttime="20170723 00:51:51.395">Test added from merged output.</status>
+</test>
+<status status="FAIL" elapsedtime="86863" endtime="N/A" starttime="N/A">Suite teardown failed:
+No application is open</status>
+</suite>
+<status status="FAIL" elapsedtime="86863" endtime="N/A" starttime="N/A"></status>
+</suite>
+<status status="FAIL" elapsedtime="86863" endtime="N/A" starttime="N/A"></status>
+</suite>
+<status status="FAIL" elapsedtime="86863" endtime="N/A" starttime="N/A"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">tag1</stat>
+<stat fail="0" pass="1">tag2</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="iOS AutoTest Mutil" pass="1">iOS AutoTest Mutil</stat>
+<stat fail="1" id="s1-s1" name="01 测试用例" pass="1">iOS AutoTest Mutil.01 测试用例</stat>
+<stat fail="1" id="s1-s1-s1" name="01 登录" pass="1">iOS AutoTest Mutil.01 测试用例.01 登录</stat>
+<stat fail="1" id="s1-s1-s1-s1" name="01 登录" pass="1">iOS AutoTest Mutil.01 测试用例.01 登录.01 登录</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170723 00:51:54.766" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20170723 00:51:54.775" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

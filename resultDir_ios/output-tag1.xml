@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170723 00:51:51.178" generator="Robot 3.0.1 (Python 2.7.10 on darwin)">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil" id="s1" name="iOS AutoTest Mutil">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil/01_测试用例" id="s1-s1" name="01 测试用例">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil/01_测试用例/01_登录" id="s1-s1-s1" name="01 登录">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil/01_测试用例/01_登录/01_登录.txt" id="s1-s1-s1-s1" name="01 登录">
+<test id="s1-s1-s1-s1-t1" name="启动滑屏">
+<kw name="安装并打开论客" library="01_前置后置操作">
+<kw name="连接服务器" library="01_前置后置操作">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>&amp;{desired_caps}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170723 00:51:54.765" level="FAIL">No application is open</msg>
+<status status="FAIL" endtime="20170723 00:51:54.766" starttime="20170723 00:51:54.762"></status>
+</kw>
+<msg timestamp="20170723 00:51:54.766" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20170723 00:51:54.768" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not install app: 'Command 'ios-deploy --id 0a6fa2250bea19b846cec413700b360a94de41df --uninstall --bundle /var/folders/pp/vfz5cphx6c71zzk9m6xmxk9w0000gn/T/2017623-1132-1ln0n6v.wlh7b0ggb9/Payload/LunkrEnterprise.app' exited with code 253'
+</msg>
+<status status="FAIL" endtime="20170723 00:51:54.768" starttime="20170723 00:51:51.397"></status>
+</kw>
+<status status="FAIL" endtime="20170723 00:51:54.769" starttime="20170723 00:51:51.397"></status>
+</kw>
+<status status="FAIL" endtime="20170723 00:51:54.769" starttime="20170723 00:51:51.396"></status>
+</kw>
+<tags>
+<tag>tag1</tag>
+</tags>
+<status status="FAIL" endtime="20170723 00:51:54.769" critical="yes" starttime="20170723 00:51:51.395">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not install app: 'Command 'ios-deploy --id 0a6fa2250bea19b846cec413700b360a94de41df --uninstall --bundle /var/folders/pp/vfz5cphx6c71zzk9m6xmxk9w0000gn/T/2017623-1132-1ln0n6v.wlh7b0ggb9/Payload/LunkrEnterprise.app' exited with code 253'
+</status>
+</test>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170723 00:51:54.775" level="FAIL">No application is open</msg>
+<status status="FAIL" endtime="20170723 00:51:54.775" starttime="20170723 00:51:54.773"></status>
+</kw>
+<msg timestamp="20170723 00:51:54.775" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20170723 00:51:54.775" level="FAIL">No application is open</msg>
+<status status="FAIL" endtime="20170723 00:51:54.775" starttime="20170723 00:51:54.771">No application is open</status>
+</kw>
+<status status="FAIL" endtime="20170723 00:51:54.776" starttime="20170723 00:51:51.264">Suite teardown failed:
+No application is open</status>
+</suite>
+<status status="FAIL" endtime="20170723 00:51:54.778" starttime="20170723 00:51:51.262"></status>
+</suite>
+<status status="FAIL" endtime="20170723 00:51:54.780" starttime="20170723 00:51:51.258"></status>
+</suite>
+<status status="FAIL" endtime="20170723 00:51:54.782" starttime="20170723 00:51:51.183"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">tag1</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="iOS AutoTest Mutil" pass="0">iOS AutoTest Mutil</stat>
+<stat fail="1" id="s1-s1" name="01 测试用例" pass="0">iOS AutoTest Mutil.01 测试用例</stat>
+<stat fail="1" id="s1-s1-s1" name="01 登录" pass="0">iOS AutoTest Mutil.01 测试用例.01 登录</stat>
+<stat fail="1" id="s1-s1-s1-s1" name="01 登录" pass="0">iOS AutoTest Mutil.01 测试用例.01 登录.01 登录</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170723 00:51:54.766" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20170723 00:51:54.775" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

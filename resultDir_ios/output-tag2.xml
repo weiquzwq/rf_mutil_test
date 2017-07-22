@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170723 00:51:51.178" generator="Robot 3.0.1 (Python 2.7.10 on darwin)">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil" id="s1" name="iOS AutoTest Mutil">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil/01_测试用例" id="s1-s1" name="01 测试用例">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil/01_测试用例/01_登录" id="s1-s1-s1" name="01 登录">
+<suite source="/Volumes/sd_card/lunkr_test_git/iOS_AutoTest_Mutil/01_测试用例/01_登录/01_登录.txt" id="s1-s1-s1-s1" name="01 登录">
+<test id="s1-s1-s1-s1-t1" name="启动滑屏2">
+<kw name="安装并打开论客" library="01_前置后置操作">
+<kw name="连接服务器" library="01_前置后置操作">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>&amp;{desired_caps}</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:52:29.519" starttime="20170723 00:51:51.397"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:29.520" starttime="20170723 00:51:51.397"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:29.520" starttime="20170723 00:51:51.396"></status>
+</kw>
+<kw name="点击允许通知按钮" library="01_登录界面操作">
+<arguments>
+<arg>${notice_okz}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:52:34.900" starttime="20170723 00:52:29.522"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20170723 00:52:34.900" level="INFO">Clicking element 'xpath=//*/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]/XCUIElementTypeButton[1]'.</msg>
+<status status="PASS" endtime="20170723 00:52:39.593" starttime="20170723 00:52:34.900"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:39.593" starttime="20170723 00:52:29.521"></status>
+</kw>
+<kw type="for" name="${i} IN RANGE [ 3 ]">
+<kw type="foritem" name="${i} = 0">
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>600</arg>
+<arg>300</arg>
+<arg>-500</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:52:45.544" starttime="20170723 00:52:39.594"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20170723 00:52:47.546" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170723 00:52:47.547" starttime="20170723 00:52:45.544"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:47.547" starttime="20170723 00:52:39.594"></status>
+</kw>
+<kw type="foritem" name="${i} = 1">
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>600</arg>
+<arg>300</arg>
+<arg>-500</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:52:53.171" starttime="20170723 00:52:47.548"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20170723 00:52:55.173" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170723 00:52:55.174" starttime="20170723 00:52:53.171"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:52:55.174" starttime="20170723 00:52:47.547"></status>
+</kw>
+<kw type="foritem" name="${i} = 2">
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>600</arg>
+<arg>300</arg>
+<arg>-500</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:53:00.635" starttime="20170723 00:52:55.175"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20170723 00:53:02.637" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170723 00:53:02.637" starttime="20170723 00:53:00.636"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:53:02.637" starttime="20170723 00:52:55.175"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:53:02.637" starttime="20170723 00:52:39.593"></status>
+</kw>
+<kw name="点击允许通知按钮" library="01_登录界面操作">
+<arguments>
+<arg>${start_use}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170723 00:53:08.297" starttime="20170723 00:53:02.639"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20170723 00:53:08.298" level="INFO">Clicking element 'xpath=//*/XCUIElementTypeOther[1]/XCUIElementTypeScrollView[1]/XCUIElementTypeButton[1]'.</msg>
+<status status="PASS" endtime="20170723 00:53:13.876" starttime="20170723 00:53:08.298"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:53:13.876" starttime="20170723 00:53:02.638"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170723 00:53:14.879" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170723 00:53:14.880" starttime="20170723 00:53:13.877"></status>
+</kw>
+<tags>
+<tag>tag2</tag>
+</tags>
+<status status="PASS" endtime="20170723 00:53:14.880" critical="yes" starttime="20170723 00:51:51.395"></status>
+</test>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application.</doc>
+<status status="PASS" endtime="20170723 00:53:15.383" starttime="20170723 00:53:14.882"></status>
+</kw>
+<status status="PASS" endtime="20170723 00:53:15.383" starttime="20170723 00:51:51.264"></status>
+</suite>
+<status status="PASS" endtime="20170723 00:53:15.386" starttime="20170723 00:51:51.261"></status>
+</suite>
+<status status="PASS" endtime="20170723 00:53:15.388" starttime="20170723 00:51:51.258"></status>
+</suite>
+<status status="PASS" endtime="20170723 00:53:15.390" starttime="20170723 00:51:51.183"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">tag2</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="iOS AutoTest Mutil" pass="1">iOS AutoTest Mutil</stat>
+<stat fail="0" id="s1-s1" name="01 测试用例" pass="1">iOS AutoTest Mutil.01 测试用例</stat>
+<stat fail="0" id="s1-s1-s1" name="01 登录" pass="1">iOS AutoTest Mutil.01 测试用例.01 登录</stat>
+<stat fail="0" id="s1-s1-s1-s1" name="01 登录" pass="1">iOS AutoTest Mutil.01 测试用例.01 登录.01 登录</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
