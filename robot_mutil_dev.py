@@ -3,7 +3,7 @@ import multiprocessing
 from time import ctime,sleep
 import os 
 import sys
-from run_server import get_info,check_server
+from run_server import get_info,mange_server
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -69,7 +69,7 @@ elif testos in ["iOS","ios"]:
     for tag in taglist:
       wdport=wdhost+str(iport)+"/wd/hub"
       #print wdport
-      booll=check_server.check(ipaddr,iport)
+      booll=mange_server.check(ipaddr,iport)
       if booll==0:
         print "the appium server by {0} is not start,please check it".format(wdport)
         sys.exit(0)
@@ -86,7 +86,7 @@ elif testos in ["Android","android"]:
         for tag in taglist:
           wdport=wdhost+str(aport)+"/wd/hub"
           #print wdport
-          booll = check_server.check(ipaddr, aport)
+          booll = mange_server.check(ipaddr, aport)
           if booll == 0:
               print "the appium server by {0} is not start,please check it".format(wdport)
               sys.exit(0)

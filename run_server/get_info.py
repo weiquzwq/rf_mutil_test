@@ -20,6 +20,7 @@ def get_devices(auto=None):
     	for idevice in output:
         	idev=idevice.split('\n')[0]
         	devices.append(idev)
+        devices.reverse()    
     	return devices
 
     output=ADB.getConnectDevices()
@@ -28,6 +29,7 @@ def get_devices(auto=None):
         if line['state'] in ["device","device\r"]:
             dev=line['uuid']
             devices.append(dev)
+    devices.reverse()    
     return devices
 
 

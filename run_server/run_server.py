@@ -4,7 +4,7 @@ import sys
 #import check_port
 import get_info
 import threading
-import mange_port
+import mange_server
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -55,33 +55,40 @@ def start_server():
         if plat in ["iOS","ios","Android","android"]:
             if osplat in ["Mac"]:
                 if plat in ["iOS","ios"]:
-                    mange_port.kill_port(wport)
-                    mange_port.kill_port(iport)
+                    result=mange_server.kill_port(iport)
+                    mange_server.kill_port(wport)
                     run_app="xterm -e /bin/bash -c 'sh run_appium_ios.sh {0} {1} {2} ' &".format(iport,wport,ip)
                     iport=iport+1
                     wport=wport+1              
                 else:
-                    mange_port.kill_port(aport)
-                    mange_port.kill_port(bport)
+                    result=mange_server.kill_port(aport)
+                    mange_server.kill_port(bport)
                     run_app="xterm -e /bin/bash -c 'sh run_appium_ad.sh {0} {1} {2}' &".format(aport,bport,ip)
                     aport=aport+1
                     bport=bport+1
             else:
-                mange_port.kill_port(aport)
-                mange_port.kill_port(bport)
+                result=mange_server.kill_port(aport)
+                mange_server.kill_port(bport)
                 run_app="start run_appium.bat {0} {1} {2}".format(aport,bport,ip)
                 aport=aport+1
                 bport=bport+1
-            os.system(run_app)
+
+            if result==1:
+                os.system(run_app)
+            else:
+                pass
             
             
         elif plat in ["grid","Grid"]:
-            mange_port.kill_port(bport)
+            result=mange_server.kill_port(bport)
             if osplat in ["Mac"]:
                 run_app="xterm -e /bin/bash -c 'sh run_appium_grid.sh {0} {1} {2} {3} {4}' &".format(ip,aport,bport,div,conf_mac)
             else:
                 run_app='start run_appium_grid.bat {0} {1} {2} {3} {4}'.format(ip,aport,bport,div,conf)
-            os.system(run_app)     
+            if result==1:
+                os.system(run_app)
+            else:
+                pass     
             aport=aport+1
             bport=bport+1
 
@@ -98,7 +105,6 @@ if divlist==[]:
         else:
             print "Not support this os device!"
     else:
-        t=0
         for t in range (int(num)):
             start_server()
                
