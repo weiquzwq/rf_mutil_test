@@ -61,17 +61,22 @@ if "-sp" in arglist:
     wport=int(arglist[arglist.index('-sp')+1])
 else:
     bport=5723
-    wport=8101    
+    wport=8101
+
+if "-r" in  arglist:
+  remoteurl=arglist[arglist.index('-r')+1]
+else:
+  remoteurl='None'         
 
 
 taglist=tags.split(',')
 
-if len(tags)==0:
-   cmd='pybot -o .\\resultDir\\output.xml -l .\\resultDir\\log.html -r .\\resultDir\\report.html --variable remote_url:{1} {0}'.format(testsuite,remoteurl)
-   p=multiprocessing.Process(target=run,args=(cmd,))
-   lprocess.append(p)
+#if len(tags)==0:
+#   cmd='pybot -o .\\resultDir\\output.xml -l .\\resultDir\\log.html -r .\\resultDir\\report.html --variable remote_url:{1} {0}'.format(testsuite,remoteurl)
+#   p=multiprocessing.Process(target=run,args=(cmd,))
+#   lprocess.append(p)
 
-elif testos in ["iOS","ios"]:
+if testos in ["iOS","ios"]:
     i=0
     divlist=get_info.get_devices("iOS")
     for tag in taglist:
@@ -100,11 +105,26 @@ elif testos in ["Android","android"]:
           if osplat!="Windows":
             cmd='pybot -i {0} -o ./resultDir_ad/output-{0}.xml -l ./resultDir_ad/log-{0}.html -r ./resultDir_ad/report-{0}.html --variable remote_url:{2} --variable udid:{3} {1}'.format(tag,testsuite,wdport,divlist[i])
           else:
-            cmd='pybot -i {0} -o .\\resultDir_ad\\output-{0}.xml -l .\\resultDir_ad\\log-{0}.html -r .\\resultDir_ad\\report-{0}.html --variable remote_url:{2} {1}'.format(tag,testsuite,wdport)
+            cmd='pybot -i {0} -o .\\resultDir_ad\\output-{0}.xml -l .\\resultDir_ad\\log-{0}.html -r .\\resultDir_ad\\report-{0}.html --variable remote_url:{2} --variable udid:{3} {1}'.format(tag,testsuite,wdport,divlist[i])
           p=multiprocessing.Process(target=run,args=(cmd,))
           lprocess.append(p)
           aport=aport+1
           i=i+1
+
+elif testos in ["Web","web"]:
+  if remoteurl=='None':
+      print "if you want to run web mutil test by the tool,print input the sele-grid url!"
+      sys.exit(0)
+
+  else:
+    for tag in taglist:
+      if osplat!="Windows":
+        cmd='pybot -i {0} -o ./resultDir_web/output-{0}.xml -l ./resultDir_web/log-{0}.html -r ./resultDir_web/report-{0}.html --variable remote_url:{2}  {1}'.format(tag,testsuite,remoteurl)
+      else:
+        cmd='pybot -i {0} -o .\\resultDir_web\\output-{0}.xml -l .\\resultDir_web\\log-{0}.html -r .\\resultDir_web\\report-{0}.html --variable remote_url:{2} {1}'.format(tag,testsuite,remoteurl)
+      p=multiprocessing.Process(target=run,args=(cmd,))
+      lprocess.append(p)
+         
 
 else:   
    print "please input true args!"
@@ -139,12 +159,12 @@ if __name__ == '__main__':
         elif testos in ["Android","android"]:
           os.system(u"rebot --output ./resultDir_ad/output.xml  -l ./resultDir_ad/log.html -r ./resultDir_ad/report.html --merge ./resultDir_ad/output-*.xml")
         else:
-           os.system(u"rebot --output ./resultDir/output.xml  -l ./resultDir/log.html -r ./resultDir/report.html --merge ./resultDir/output-*.xml")
+           os.system(u"rebot --output ./resultDir_web/output.xml  -l ./resultDir_web/log.html -r ./resultDir_web/report.html --merge ./resultDir_web/output-*.xml")
     else:
         sleep(2)
         if testos in ["Android","android"]:
           os.system(u"rebot --output .\\resultDir_ad\\output.xml  -l .\\resultDir_ad\\log.html -r .\\resultDir_ad\\report.html --merge .\\resultDir_ad\\output-*.xml")
         else:  
-          os.system(u"rebot --output .\\resultDir\\output.xml  -l .\\resultDir\\log.html -r .\\resultDir\\report.html --merge .\\resultDir\\output-*.xml")
+          os.system(u"rebot --output .\\resultDir_web\\output.xml  -l .\\resultDir_web\\log.html -r .\\resultDir_web\\report.html --merge .\\resultDir_web\\output-*.xml")
     sleep(2)
     print "Test Finish"

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170801 00:29:26.501" generator="Rebot 3.0.1 (Python 2.7.10 on darwin)">
+<suite source="/Volumes/sd_card/lunkr_test_git/Web_AutoTest_Mutil" id="s1" name="Web AutoTest Mutil">
+<suite source="/Volumes/sd_card/lunkr_test_git/Web_AutoTest_Mutil/web_mutil.txt" id="s1-s1" name="Web Mutil">
+<test id="s1-s1-t1" name="open_lunkr">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://www.lunkr.cn</arg>
+<arg>chrome</arg>
+<arg>remote_url=${remote_url}</arg>
+</arguments>
+<msg timestamp="20170801 00:29:11.803" level="INFO">Opening browser 'chrome' to base url 'https://www.lunkr.cn' through remote server at 'http://127.0.0.1:4444/wd/hub'</msg>
+<status status="PASS" endtime="20170801 00:29:14.688" starttime="20170801 00:29:11.802"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20170801 00:29:17.690" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170801 00:29:17.690" starttime="20170801 00:29:14.689"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=setting</arg>
+<arg>3</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170801 00:29:21.101" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170801 00:29:21.101" starttime="20170801 00:29:20.899"></status>
+</kw>
+<msg timestamp="20170801 00:29:21.102" level="FAIL">Element 'id=setting' did not appear in 3 seconds</msg>
+<status status="FAIL" endtime="20170801 00:29:21.102" starttime="20170801 00:29:17.691"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170801 00:29:21.193" starttime="20170801 00:29:21.103"></status>
+</kw>
+<tags>
+<tag>local</tag>
+</tags>
+<status status="FAIL" endtime="20170801 00:29:21.193" critical="yes" starttime="20170801 00:29:11.801">Element 'id=setting' did not appear in 3 seconds</status>
+</test>
+<test id="s1-s1-t2" name="open_baidu">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://www.baidu.com</arg>
+<arg>chrome</arg>
+<arg>remote_url=${remote_url}</arg>
+</arguments>
+<msg timestamp="20170801 00:29:11.861" level="INFO">Opening browser 'chrome' to base url 'https://www.baidu.com' through remote server at 'http://127.0.0.1:4444/wd/hub'</msg>
+<status status="PASS" endtime="20170801 00:29:14.384" starttime="20170801 00:29:11.859"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20170801 00:29:20.386" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" endtime="20170801 00:29:20.386" starttime="20170801 00:29:14.384"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170801 00:29:20.472" starttime="20170801 00:29:20.387"></status>
+</kw>
+<tags>
+<tag>node1</tag>
+</tags>
+<status status="PASS" endtime="20170801 00:29:20.472" critical="yes" starttime="20170801 00:29:11.858">Test added from merged output.</status>
+</test>
+<test id="s1-s1-t3" name="open_coremail">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.coremail.cn</arg>
+<arg>chrome</arg>
+<arg>remote_url=${remote_url}</arg>
+</arguments>
+<msg timestamp="20170801 00:29:11.815" level="INFO">Opening browser 'chrome' to base url 'http://www.coremail.cn' through remote server at 'http://127.0.0.1:4444/wd/hub'</msg>
+<status status="PASS" endtime="20170801 00:29:18.108" starttime="20170801 00:29:11.812"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20170801 00:29:24.112" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" endtime="20170801 00:29:24.112" starttime="20170801 00:29:18.109"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170801 00:29:24.204" starttime="20170801 00:29:24.113"></status>
+</kw>
+<tags>
+<tag>node2</tag>
+</tags>
+<status status="PASS" endtime="20170801 00:29:24.204" critical="yes" starttime="20170801 00:29:11.811">Test added from merged output.</status>
+</test>
+<status status="FAIL" elapsedtime="30399" endtime="N/A" starttime="N/A"></status>
+</suite>
+<status status="FAIL" elapsedtime="30399" endtime="N/A" starttime="N/A"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="2">Critical Tests</stat>
+<stat fail="1" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">local</stat>
+<stat fail="0" pass="1">node1</stat>
+<stat fail="0" pass="1">node2</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Web AutoTest Mutil" pass="2">Web AutoTest Mutil</stat>
+<stat fail="1" id="s1-s1" name="Web Mutil" pass="2">Web AutoTest Mutil.Web Mutil</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
