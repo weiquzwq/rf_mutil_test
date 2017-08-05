@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170802 18:12:10.751" generator="Robot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="D:\Web_AutoTest_Mutil" id="s1" name="Web AutoTest Mutil">
+<suite source="D:\Web_AutoTest_Mutil\01_测试用例" id="s1-s1" name="01 测试用例">
+<suite source="D:\Web_AutoTest_Mutil\01_测试用例\03_Open_baidu.txt" id="s1-s1-s1" name="03 Open baidu">
+<test id="s1-s1-s1-t1" name="open_baidu">
+<kw name="启动浏览器" library="01_公共业务">
+<arguments>
+<arg>https://www.baidu.com</arg>
+<arg>chrome</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${remote_url}'=='None'</arg>
+<arg>Open Browser</arg>
+<arg>${url}</arg>
+<arg>${btype}</arg>
+</arguments>
+<status status="PASS" endtime="20170802 18:12:11.043" starttime="20170802 18:12:11.042"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${remote_url}'!='None'</arg>
+<arg>Open Browser</arg>
+<arg>${url}</arg>
+<arg>${btype}</arg>
+<arg>remote_url=${remote_url}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${btype}</arg>
+<arg>remote_url=${remote_url}</arg>
+</arguments>
+<msg timestamp="20170802 18:12:11.047" level="INFO">Opening browser 'chrome' to base url 'https://www.baidu.com' through remote server at 'http://192.168.99.100:24444/wd/hub'</msg>
+<status status="PASS" endtime="20170802 18:12:23.695" starttime="20170802 18:12:11.044"></status>
+</kw>
+<status status="PASS" endtime="20170802 18:12:23.695" starttime="20170802 18:12:11.043"></status>
+</kw>
+<status status="PASS" endtime="20170802 18:12:23.695" starttime="20170802 18:12:11.041"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170802 18:12:24.695" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170802 18:12:24.695" starttime="20170802 18:12:23.695"></status>
+</kw>
+<kw name="输入搜索内容" library="02_Baidu">
+<arguments>
+<arg>阿里游戏</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${input_search}</arg>
+</arguments>
+<status status="PASS" endtime="20170802 18:12:25.011" starttime="20170802 18:12:24.695"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170802 18:12:26.011" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170802 18:12:26.011" starttime="20170802 18:12:25.011"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=kw</arg>
+<arg>${content}</arg>
+</arguments>
+<msg timestamp="20170802 18:12:26.011" level="INFO">Typing text '阿里游戏' into text field 'id=kw'</msg>
+<status status="PASS" endtime="20170802 18:12:29.369" starttime="20170802 18:12:26.011"></status>
+</kw>
+<status status="PASS" endtime="20170802 18:12:29.369" starttime="20170802 18:12:24.695"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170802 18:12:30.370" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170802 18:12:30.370" starttime="20170802 18:12:29.369"></status>
+</kw>
+<kw name="点击搜索按钮" library="02_Baidu">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_search}</arg>
+</arguments>
+<status status="PASS" endtime="20170802 18:12:32.460" starttime="20170802 18:12:30.371"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170802 18:12:33.460" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170802 18:12:33.460" starttime="20170802 18:12:32.460"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_search}</arg>
+</arguments>
+<msg timestamp="20170802 18:12:33.461" level="INFO">Clicking element 'id=su'.</msg>
+<status status="PASS" endtime="20170802 18:12:34.768" starttime="20170802 18:12:33.461"></status>
+</kw>
+<status status="PASS" endtime="20170802 18:12:34.768" starttime="20170802 18:12:30.370"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20170802 18:12:36.769" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170802 18:12:36.769" starttime="20170802 18:12:34.769"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170802 18:12:37.109" starttime="20170802 18:12:36.769"></status>
+</kw>
+<tags>
+<tag>node1</tag>
+</tags>
+<status status="PASS" endtime="20170802 18:12:37.110" critical="yes" starttime="20170802 18:12:11.039"></status>
+</test>
+<status status="PASS" endtime="20170802 18:12:37.111" starttime="20170802 18:12:10.814"></status>
+</suite>
+<status status="PASS" endtime="20170802 18:12:37.114" starttime="20170802 18:12:10.808"></status>
+</suite>
+<status status="PASS" endtime="20170802 18:12:37.117" starttime="20170802 18:12:10.756"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">node1</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Web AutoTest Mutil" pass="1">Web AutoTest Mutil</stat>
+<stat fail="0" id="s1-s1" name="01 测试用例" pass="1">Web AutoTest Mutil.01 测试用例</stat>
+<stat fail="0" id="s1-s1-s1" name="03 Open baidu" pass="1">Web AutoTest Mutil.01 测试用例.03 Open baidu</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

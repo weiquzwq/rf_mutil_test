@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170802 20:23:29.533" generator="Rebot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="D:\AutoTest_Mutil" id="s1" name="AutoTest Mutil">
+<suite source="D:\AutoTest_Mutil\Mutil_Test01.txt" id="s1-s1" name="Mutil Test01">
+<test id="s1-s1-t1" name="测试用例01">
+<kw name="安装应用" library="resources">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<assign>
+<var>${midtmp}</var>
+</assign>
+<msg timestamp="20170802 20:21:45.466" level="INFO">${midtmp} = ZasE6MMWf0</msg>
+<status status="PASS" endtime="20170802 20:21:45.466" starttime="20170802 20:21:45.465"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>platformName=android</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${midtmp}</arg>
+<arg>app=${APP_APKPATH}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>app-wait-activity=None</arg>
+<arg>unicodeKeyboard=True</arg>
+<arg>resetKeyboard=True</arg>
+<arg>udid=${udid}</arg>
+</arguments>
+<status status="PASS" endtime="20170802 20:22:46.239" starttime="20170802 20:21:45.466"></status>
+</kw>
+<status status="PASS" endtime="20170802 20:22:46.239" starttime="20170802 20:21:45.465"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@text='please input username']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170802 20:22:50.188" starttime="20170802 20:22:46.242"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@text='please input username']</arg>
+<arg>Test+12345678</arg>
+</arguments>
+<msg timestamp="20170802 20:22:50.189" level="INFO">Typing text 'Test+12345678' into text field 'xpath=//android.widget.EditText[@text='please input username']'</msg>
+<status status="PASS" endtime="20170802 20:22:55.925" starttime="20170802 20:22:50.188"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@text='please input password']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170802 20:22:56.587" starttime="20170802 20:22:55.926"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@text='please input password']</arg>
+<arg>Test+12345678</arg>
+</arguments>
+<msg timestamp="20170802 20:22:56.589" level="INFO">Typing text 'Test+12345678' into text field 'xpath=//android.widget.EditText[@text='please input password']'</msg>
+<status status="PASS" endtime="20170802 20:23:02.155" starttime="20170802 20:22:56.589"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170802 20:23:03.156" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170802 20:23:03.156" starttime="20170802 20:23:02.156"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.github.android_app_bootstrap:id/login_button</arg>
+</arguments>
+<msg timestamp="20170802 20:23:03.157" level="INFO">Clicking element 'id=com.github.android_app_bootstrap:id/login_button'.</msg>
+<status status="PASS" endtime="20170802 20:23:03.661" starttime="20170802 20:23:03.156"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20170802 20:23:06.662" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170802 20:23:06.662" starttime="20170802 20:23:03.661"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application.</doc>
+<status status="PASS" endtime="20170802 20:23:22.223" starttime="20170802 20:23:06.664"></status>
+</kw>
+<tags>
+<tag>test1</tag>
+</tags>
+<status status="PASS" endtime="20170802 20:23:22.224" critical="yes" starttime="20170802 20:21:45.463"></status>
+</test>
+<status status="PASS" endtime="20170802 20:23:22.231" starttime="20170802 20:21:44.615"></status>
+</suite>
+<suite source="D:\AutoTest_Mutil\Mutil_Test02.txt" id="s1-s2" name="Mutil Test02">
+<test id="s1-s2-t1" name="测试用例02">
+<kw name="安装应用" library="resources">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<assign>
+<var>${midtmp}</var>
+</assign>
+<msg timestamp="20170802 20:21:45.468" level="INFO">${midtmp} = W8SNPi47y0</msg>
+<status status="PASS" endtime="20170802 20:21:45.468" starttime="20170802 20:21:45.467"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>platformName=android</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${midtmp}</arg>
+<arg>app=${APP_APKPATH}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>app-wait-activity=None</arg>
+<arg>unicodeKeyboard=True</arg>
+<arg>resetKeyboard=True</arg>
+<arg>udid=${udid}</arg>
+</arguments>
+<status status="PASS" endtime="20170802 20:22:49.889" starttime="20170802 20:21:45.468"></status>
+</kw>
+<status status="PASS" endtime="20170802 20:22:49.889" starttime="20170802 20:21:45.467"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@text='please input username']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170802 20:22:53.820" starttime="20170802 20:22:49.890"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@text='please input username']</arg>
+<arg>test0000</arg>
+</arguments>
+<msg timestamp="20170802 20:22:53.822" level="INFO">Typing text 'test0000' into text field 'xpath=//android.widget.EditText[@text='please input username']'</msg>
+<status status="PASS" endtime="20170802 20:23:00.465" starttime="20170802 20:22:53.821"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@text='please input password']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170802 20:23:00.608" starttime="20170802 20:23:00.466"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@text='please input password']</arg>
+<arg>test0001</arg>
+</arguments>
+<msg timestamp="20170802 20:23:00.614" level="INFO">Typing text 'test0001' into text field 'xpath=//android.widget.EditText[@text='please input password']'</msg>
+<status status="PASS" endtime="20170802 20:23:06.619" starttime="20170802 20:23:00.614"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170802 20:23:07.621" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170802 20:23:07.621" starttime="20170802 20:23:06.621"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.github.android_app_bootstrap:id/login_button</arg>
+</arguments>
+<msg timestamp="20170802 20:23:07.624" level="INFO">Clicking element 'id=com.github.android_app_bootstrap:id/login_button'.</msg>
+<status status="PASS" endtime="20170802 20:23:08.598" starttime="20170802 20:23:07.624"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20170802 20:23:11.601" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170802 20:23:11.601" starttime="20170802 20:23:08.601"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application.</doc>
+<status status="PASS" endtime="20170802 20:23:25.528" starttime="20170802 20:23:11.605"></status>
+</kw>
+<tags>
+<tag>test2</tag>
+</tags>
+<status status="PASS" endtime="20170802 20:23:25.528" critical="yes" starttime="20170802 20:21:45.464"></status>
+</test>
+<status status="PASS" endtime="20170802 20:23:25.533" starttime="20170802 20:21:44.616">Suite added from merged output.</status>
+</suite>
+<status status="PASS" elapsedtime="198533" endtime="N/A" starttime="N/A"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">test1</stat>
+<stat fail="0" pass="1">test2</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="AutoTest Mutil" pass="2">AutoTest Mutil</stat>
+<stat fail="0" id="s1-s1" name="Mutil Test01" pass="1">AutoTest Mutil.Mutil Test01</stat>
+<stat fail="0" id="s1-s2" name="Mutil Test02" pass="1">AutoTest Mutil.Mutil Test02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

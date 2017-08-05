@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170802 18:12:10.726" generator="Robot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="D:\Web_AutoTest_Mutil" id="s1" name="Web AutoTest Mutil">
+<suite source="D:\Web_AutoTest_Mutil\01_测试用例" id="s1-s1" name="01 测试用例">
+<suite source="D:\Web_AutoTest_Mutil\01_测试用例\01_Open_Aligames" id="s1-s1-s1" name="01 Open Aligames">
+<suite source="D:\Web_AutoTest_Mutil\01_测试用例\01_Open_Aligames\01_Open_Aligames.txt" id="s1-s1-s1-s1" name="01 Open Aligames">
+<test id="s1-s1-s1-s1-t1" name="open_aligames">
+<kw name="启动浏览器" library="01_公共业务">
+<arguments>
+<arg>https://open.aligames.com/</arg>
+<arg>firefox</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${remote_url}'=='None'</arg>
+<arg>Open Browser</arg>
+<arg>${url}</arg>
+<arg>${btype}</arg>
+</arguments>
+<status status="PASS" endtime="20170802 18:12:11.012" starttime="20170802 18:12:11.011"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${remote_url}'!='None'</arg>
+<arg>Open Browser</arg>
+<arg>${url}</arg>
+<arg>${btype}</arg>
+<arg>remote_url=${remote_url}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${btype}</arg>
+<arg>remote_url=${remote_url}</arg>
+</arguments>
+<msg timestamp="20170802 18:12:11.016" level="INFO">Opening browser 'firefox' to base url 'https://open.aligames.com/' through remote server at 'http://192.168.99.100:24444/wd/hub'</msg>
+<status status="PASS" endtime="20170802 18:12:41.228" starttime="20170802 18:12:11.015"></status>
+</kw>
+<status status="PASS" endtime="20170802 18:12:41.228" starttime="20170802 18:12:11.012"></status>
+</kw>
+<status status="PASS" endtime="20170802 18:12:41.228" starttime="20170802 18:12:11.011"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20170802 18:12:47.229" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" endtime="20170802 18:12:47.229" starttime="20170802 18:12:41.228"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=setting</arg>
+<arg>2</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170802 18:12:50.431" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-4880-screenshot-1.png"&gt;&lt;img src="selenium-4880-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170802 18:12:50.431" starttime="20170802 18:12:49.489"></status>
+</kw>
+<msg timestamp="20170802 18:12:50.432" level="FAIL">Element 'id=setting' did not appear in 2 seconds</msg>
+<status status="FAIL" endtime="20170802 18:12:50.433" starttime="20170802 18:12:47.230"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170802 18:12:50.800" starttime="20170802 18:12:50.433"></status>
+</kw>
+<tags>
+<tag>node2</tag>
+</tags>
+<status status="FAIL" endtime="20170802 18:12:50.800" critical="yes" starttime="20170802 18:12:11.008">Element 'id=setting' did not appear in 2 seconds</status>
+</test>
+<status status="FAIL" endtime="20170802 18:12:50.802" starttime="20170802 18:12:10.780"></status>
+</suite>
+<status status="FAIL" endtime="20170802 18:12:50.806" starttime="20170802 18:12:10.776"></status>
+</suite>
+<status status="FAIL" endtime="20170802 18:12:50.808" starttime="20170802 18:12:10.772"></status>
+</suite>
+<status status="FAIL" endtime="20170802 18:12:50.812" starttime="20170802 18:12:10.731"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">node2</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Web AutoTest Mutil" pass="0">Web AutoTest Mutil</stat>
+<stat fail="1" id="s1-s1" name="01 测试用例" pass="0">Web AutoTest Mutil.01 测试用例</stat>
+<stat fail="1" id="s1-s1-s1" name="01 Open Aligames" pass="0">Web AutoTest Mutil.01 测试用例.01 Open Aligames</stat>
+<stat fail="1" id="s1-s1-s1-s1" name="01 Open Aligames" pass="0">Web AutoTest Mutil.01 测试用例.01 Open Aligames.01 Open Aligames</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
